@@ -16,7 +16,7 @@ if (fs.existsSync(".env")) {
 }
 
 // Controllers
-
+import * as indexController from "./controllers/index";
 
 // Create Express server
 const app = express();
@@ -27,7 +27,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
     uri,
     { useNewUrlParser: true },
-    function(err: MongoError) {
+    function(err: Error) {
         assert.equal(null, err);
         console.log("Connected successfully to database");
 
@@ -51,4 +51,6 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 // Routes
+app.get('/', indexController.index);
 
+export default app;

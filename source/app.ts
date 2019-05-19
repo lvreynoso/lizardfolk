@@ -53,6 +53,8 @@ app.set('view engine', 'handlebars');
 
 // Routes
 app.get('/', indexController.index);
+app.get('/char/new', characterController.uploadForm)
+app.post('/char', characterController.create)
 app.get('/char/:slug', characterController.show)
 
 export default app;

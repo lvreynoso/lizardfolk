@@ -29,3 +29,11 @@ export let show = async (req: Request, res: Response) => {
         res.render("error", { message: err.message });
     }
 };
+
+export let uploadForm = async (req: Request, res: Response) => {
+    res.render("upload", { title: "Create New Character" });
+};
+
+export let create = async (req: Request, res: Response) => {
+    
+};

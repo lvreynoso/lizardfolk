@@ -6,6 +6,7 @@ export type CharacterDocument = mongoose.Document & {
     class: string,
     description: string,
     slug: string,
+    avatarType: string,
     avatar: Buffer,
 };
 

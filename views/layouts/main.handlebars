@@ -18,17 +18,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                {{#if currentUser}}
+                {{!-- {{#if currentUser}} --}}
                 <li class="nav-item active">
-                    <a href="/posts/new" class="btn btn-primary navbar-btn">New Post<span class="sr-only">(current)</span></a>
+                    <a href="/chars/new" class="btn btn-primary navbar-btn">New Character</a>
                 </li>
-                {{/if}}
-                <li class="nav-item">
-                    <a href="/posts" class="nav-link">All Posts</a>
-                </li>
+                {{!-- {{/if}} --}}
+                {{!-- <li class="nav-item">
+                    <a href="/chars" class="nav-link">All Characters</a>
+                </li> --}}
             </ul>
             <ul class="navbar-nav navbar-right">
-                {{#if currentUser}}
+                {{!-- {{#if currentUser}}
                 <li class="nav-item">
                     <a href="/logout" class="nav-link">Logout</a>
                 </li>
@@ -39,7 +39,7 @@
                 <li class="nav-item">
                     <a href="/sign-up" class="nav-link">Sign Up</a>
                 </li>
-                {{/if}}
+                {{/if}} --}}
             </ul>
         </div>
     </nav>

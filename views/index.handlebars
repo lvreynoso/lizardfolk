@@ -1,4 +1,16 @@
 <!-- index.handlebars -->
 <div class="container">
-    <h1>Server online!</h1>
+    <div class="row">
+        {{#each char}}
+        <div class="col-sm-4 justify-content-center">
+        <div class="card"><img class="card-img-top avatar" alt="Card image cap" ident={{char.ident}}>
+            <div class="card-body">
+                <h4 class="card-title">{{char.name}}</h4><small class="text-muted">{{char.class}}</small>
+                <p class="card-text">{{char.description}}</p>
+                <div class="text-right"><a class="card-link" href="chars/{{char.slug}}">View {{char.name}}</a></div>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+    </div>
 </div>

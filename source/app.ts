@@ -17,6 +17,7 @@ if (fs.existsSync(".env")) {
 
 // Controllers
 import * as indexController from "./controllers/index";
+import * as characterController from "./controllers/character"
 
 // Create Express server
 const app = express();
@@ -52,5 +53,6 @@ app.set('view engine', 'handlebars');
 
 // Routes
 app.get('/', indexController.index);
+app.get('/char/:slug', characterController.show)
 
 export default app;

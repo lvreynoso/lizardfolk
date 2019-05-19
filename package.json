@@ -4,7 +4,10 @@
   "description": "lizardfolk is a typescript-based app you can use to keep track of your dnd characters.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,30 @@
   "bugs": {
     "url": "https://github.com/lvreynoso/lizardfolk/issues"
   },
-  "homepage": "https://github.com/lvreynoso/lizardfolk#readme"
+  "homepage": "https://github.com/lvreynoso/lizardfolk#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.0",
+    "express-handlebars": "^3.1.0",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.9",
+    "multer": "^1.4.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.1",
+    "@types/dotenv": "^6.1.1",
+    "@types/errorhandler": "0.0.32",
+    "@types/express-handlebars": "0.0.31",
+    "@types/mongodb": "^3.1.27",
+    "@types/mongoose": "^5.5.1",
+    "@types/node": "^12.0.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4"
+  }
 }
